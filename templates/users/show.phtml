@@ -1,0 +1,10 @@
+<?php foreach($user as $key => $value): ?>
+         <?= $user[$key] ?>
+<?php endforeach; ?>
+
+<a href = "<?=$user['id']?>/edit">Update information </a>
+
+<form action="/users/<?= $user['id'] ?>" method="post">
+    <input type="hidden" name="_METHOD" value="DELETE">
+    <input type="submit" value="Remove">
+</form>
